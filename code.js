@@ -22,12 +22,18 @@ function changeBoardSize(){
     let newSize = 0;
     newSize = parseInt(newSize);
     newSizeButton.addEventListener('click', () => {
-        prompt("Size for new board? (1-100)", newSize)
-        while((newSize >= 1) && (newSize <= 100)){
+        newSize = prompt("Size for new board? (1-100)");
+        while(!(newSize >= 1) && (newSize <= 100)){
             alert("Size must be between 1 and 100!");
             prompt("Size for new board? (1-100)", newSize);
         }
-        clearBoard();
+        clearBoard(board);
         createBoard(newSize);
-    })
+    });
+
+    function clearBoard(board){
+        while(board.firstChild){
+            board.removeChild(board.firstChild);
+        }
+    }
 }

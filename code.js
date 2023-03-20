@@ -1,5 +1,5 @@
 const board = document.querySelector('#grid');
-let boardSize = 3;
+let boardSize = 16;
 
 function createBoard(size){
     let tileSize = parseFloat(500 / size);
@@ -9,7 +9,7 @@ function createBoard(size){
             square.setAttribute('id',"square" + row + col);
             square.style.height = tileSize + 'px';
             square.style.width = tileSize + 'px';
-            document.addEventListener('mouseover', () => square.style.backgroundColor = 'black');
+            square.addEventListener('mouseover', () => square.style.backgroundColor = 'black');
             board.appendChild(square);
         }
     }

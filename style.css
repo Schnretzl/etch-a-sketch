@@ -7,14 +7,26 @@ body{
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
+    border: solid 1px black;
 }
 
 #content{
     margin-top: 110px;
     margin-left: 290px;
+    display: flex;
 }
 
 div[class*='square']{
     border: solid;
     border-width: 1px;
+}
+
+button{
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    align-content: center;
+    justify-content: center;
+    margin-left: 75px;
+    margin-top: 250px;
 }

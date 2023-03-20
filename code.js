@@ -1,5 +1,7 @@
 const board = document.querySelector('#grid');
 let boardSize = 16;
+createBoard(boardSize);
+changeBoardSize();
 
 function createBoard(size){
     let tileSize = parseFloat(500 / size);
@@ -15,5 +17,17 @@ function createBoard(size){
     }
 }
 
-
-createBoard(boardSize);
+function changeBoardSize(){
+    let newSizeButton = document.querySelector('#setSize');
+    let newSize = 0;
+    newSize = parseInt(newSize);
+    newSizeButton.addEventListener('click', () => {
+        prompt("Size for new board? (1-100)", newSize)
+        while((newSize >= 1) && (newSize <= 100)){
+            alert("Size must be between 1 and 100!");
+            prompt("Size for new board? (1-100)", newSize);
+        }
+        clearBoard();
+        createBoard(newSize);
+    })
+}

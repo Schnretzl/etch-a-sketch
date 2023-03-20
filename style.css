@@ -2,6 +2,18 @@ body{
     background-color: darkseagreen;
 }
 
-.grid{
-    display: grid;
+#grid{
+    display: flex;
+    width: 500px;
+    height: 500px;
+}
+
+#content{
+    margin-top: 230px;
+    margin-left: 290px;
+}
+
+div[class*='square']{
+    border: solid;
+    border-width: 1px;
 }

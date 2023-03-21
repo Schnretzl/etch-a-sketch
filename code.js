@@ -41,13 +41,14 @@ function changeBoardSize(){
 
 function clearBoardFromClearBtn(){
     let clearBtn = document.querySelector('#clearBoard')
-    let boardSize = 0;
+    
     clearBtn.addEventListener('click', () => {
+        let resetBoardSize = 0;
         while(board.firstChild){
             board.removeChild(board.firstChild);
-            boardSize++;
+            resetBoardSize++;
         }
-        boardSize = Math.sqrt(boardSize);
-        createBoard(boardSize);
+        resetBoardSize = Math.sqrt(resetBoardSize);
+        createBoard(resetBoardSize);
     });
 }

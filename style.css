@@ -8,6 +8,7 @@ body{
     width: 500px;
     height: 500px;
     border: solid 1px black;
+    background-color: azure;
 }
 
 #content{
@@ -24,9 +25,25 @@ div[class*='square']{
 button{
     display: flex;
     flex-wrap: wrap;
-    height: fit-content;
+    flex-direction: column;
+    height: 50px;
     align-content: center;
     justify-content: center;
     margin-left: 75px;
-    margin-top: 250px;
+    /* margin-top: 250px; */
+    border-radius: 5px;
+    gap: 30px;
+}
+
+#buttons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: stretch;
+}
+
+#clearBoard{
+    margin-top: ;
 }

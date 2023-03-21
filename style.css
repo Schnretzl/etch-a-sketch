@@ -2,8 +2,15 @@ body{
     background-color: darkseagreen;
 }
 
+h1{
+    text-align: center;
+    margin-top: 75px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #grid{
     display: flex;
+    flex:none;
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
@@ -12,7 +19,7 @@ body{
 }
 
 #content{
-    margin-top: 110px;
+    margin-top: 70px;
     margin-left: 290px;
     display: flex;
 }
